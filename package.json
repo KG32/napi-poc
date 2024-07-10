@@ -1,0 +1,23 @@
+{
+  "name": "napi-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "napi": {
+    "name": "napi-poc",
+    "triples": {}
+  },
+  "scripts": {
+    "buildRust": "napi build --js rs.js --dts rs.d.ts --platform --release ",
+    "start": "yarn buildRust && tsc && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@napi-rs/cli": "^2.18.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10"
+  }
+}
